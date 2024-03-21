@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler');
 
 app.use(express.json());
-const whiteList = ['http://localhost:3000'];
+const whiteList = ['http://localhost:3000, https://my-store-test-seven.vercel.app/'];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whiteList.indexOf(origin) !== -1 || !origin) {
